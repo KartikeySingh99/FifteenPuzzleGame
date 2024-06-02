@@ -1,5 +1,6 @@
 .container {
-  width: 100vh;
+  /* min-width: 100vh; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,4 +89,10 @@
 
 .instructions-container > p{
   margin: 0;
+}
+
+@media screen and (max-width:768px){
+  .puzzle-wrapper{
+    flex-direction: column;
+  }
 }
