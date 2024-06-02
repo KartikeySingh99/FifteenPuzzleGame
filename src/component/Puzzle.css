@@ -1,0 +1,91 @@
+.container {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.puzzle-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.grid {
+  position: relative;
+  width: fit-content;
+  /* border: 2px solid black; */
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  align-items: center;
+  justify-items: center;
+  border-radius: 18px;
+  padding: 12px;
+  gap: 10px;
+  background-color: rgb(174, 190, 227);
+}
+
+.grid.active::after {
+  content: "Not Solvable!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(211, 211, 211, 0.764);
+  /* color: antiquewhite; */
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.btn-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  width: 12rem;
+  padding: 12px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-shuffle {
+  background-color: purple;
+}
+
+.btn-solve {
+  background-color: lightskyblue;
+}
+
+.btn-reset {
+  background-color: orange;
+}
+
+.heading{
+  font-size: x-large;
+}
+
+.instructions-container{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.instructions-container > p{
+  margin: 0;
+}
